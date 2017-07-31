@@ -1,0 +1,41 @@
+1.
+Suppose w is the weight on some connection in a neural network. The network is trained using gradient descent until the learning converges. We plot the change of w as training progresses. Which of the following scenarios shows that convergence has occurred? Notice that we're plotting the change in w, as opposed to w itself.
+Note that in the plots below, each iteration refers to a single step of steepest descent on a single minibatch.
+
+oscillate
+
+2.
+Suppose you are using mini-batch gradient descent for training some neural nets on a large dataset. All neurons are logistic. You have to decide the mini-batch size and learning rate. You try some values and find that the value of the objective function on the training set keeps fluctuating and does not converge. What could be going wrong? Check all that apply.
+
+The mini-batch size could be too small.
+The learning rate may be too big.
+
+3.
+Full-batch gradient descent can be used to minimize an objective function if the dataset is not too large. Which statement regarding full-batch gradient descent is false?
+
+For every fixed learning rate, the objective function will monotonically decrease.
+
+4.
+Claire is training a neural net using mini-batch gradient descent. She chose a particular learning rate and found that the training error decreased as more iterations of training were performed, as shown here in blue:
+She was not sure if this was the best she could do. So she tried a bigger learning rate. Which of the following error curves (shown in red) might she observe now? Select the two most likely plots.
+Note that in the plots below, each iteration refers to a single step of steepest descent on a single minibatch.
+
+decrease and up (2)
+
+5.
+In the lectures, we discussed two kinds of gradient descent algorithms: mini-batch and full-batch. For which of the following problems is mini-batch gradient descent likely to be a lot better than full-batch gradient descent?
+
+Object detection: Identify which of 1000 categories an object image belongs to, given 10 million 256 X 256 pixel images.
+
+
+Speech recognition: Identify which of 40 phonemes is being pronounced in a 10-millisecond window of speech sound. The training data consists of 50,000 hours of speech data (this is more than 10 billion 1800 dimensional training points)
+
+
+
+
+
+
+
+
+
+

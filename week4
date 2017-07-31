@@ -1,0 +1,66 @@
+1.
+For every input, the cost we get using w in the softmax output network with cross-entropy error is the same as the cost we would get using w∗ in the new network with the possibly different cost function.
+The cross-entropy cost function with n logistic units.
+
+None of the above.
+
+2.
+For every input, the cost we get using w in the network with a logistic output and cross-entropy error is the same cost that we would get using w∗ in the new network with the possibly different cost function.
+
+A 2-way softmax unit (a softmax unit with 2 elements) with the cross entropy cost function.
+
+3.
+The output of a neuro-probabilistic language model is a large softmax unit and this creates problems if the vocabulary size is large. Andy claims that the following method solves this problem:
+At every iteration of training, train the network to predict the current learned feature vector of the target word (instead of using a softmax). Since the embedding dimensionality is typically much smaller than the vocabulary size, we don't have the problem of having many output weights any more. Which of the following are correct? Check all that apply.
+
+The serialized version of the model discussed in the slides is using the current word embedding for the output word, but it's optimizing something different than what Andy is suggesting.
+
+If we add in extra derivatives that change the feature vector for the target word to be more like what is predicted, it may find a trivial solution in which all words have the same feature vector.
+
+4.
+In this tree, each p value indicates the probability that x will be classified as belonging to a class in the right subtree of the node at which that p was computed. For example, the probability that x belongs to Class 2 is (1−p1)×p2. Recall that at training time this is a very efficient representation because we only have to consider a single branch of the tree. However, at test-time we need to look over all branches in order to determine the probabilities of each outcome.
+Suppose we are not interested in obtaining the exact probability of every outcome, but instead we just want to find the class with the maximum probability. A simple heuristic is to search the tree greedily by starting at the root and choosing the branch with maximum probability at each node on our way from the root to the leaves. That is, at the root of this tree we would choose to go right if p1≥0.5 and left otherwise.
+
+It helps if p1 is further from 0.5. It hurts if p2 is further from 0.5.
+It helps if the value of each p is close to 0 or 1.
+
+4-2
+Method a) will report class 4
+Method b) will report class 2
+
+5.
+True or false: the neural network in the lectures that was used to predict relationships in family trees had "bottleneck" layers (layers with fewer dimensions than the input). The reason these were used was to prevent the network from memorizing the training data without learning any meaningful features for generalization.
+
+True
+
+5-2
+rian is trying to use a neural network to predict the next word given several previous words. He has the following idea to reduce the amount of computation needed to make this prediction.
+Rather than having the output layer of the network be a 100,000-way softmax, Brian says that we can just encode each word as an integer: 1 will correspond to the first word, 2 to the second word and so on up to 100,000. For the output layer, we can then simply use a single linear neuron with a squared error cost function. Is this a good idea?
+
+No. Brian is implicitly imposing the belief that words with similar integers are more related to each other than words with very different integers, and this is usually not true.
+
+6.
+In the Collobert and Weston model, the problem of learning a feature vector from a sequence of words is turned into a problem of:
+
+Learning a binary classifier.
+
+
+7.
+Andy is in trouble! He is in the middle of training a feed-forward neural network that is supposed to predict the fourth word in a sequence given the previous three words (shown below).
+Brian was supposed to get the dataset ready, but accidentally swapped the first and third word in every sequence! Now the neural network sees sequences of the form word 3, word 2, word 1, word 4; so what is actually being trained is this network:
+Andy has been training this network for a long time and doesn't want to start over, but he is worried that the network won't do very well because of Brian's mistake. Should Andy be worried?
+
+Andy should not be worried. Even though the network knows that each word in the sequence is in a different place, it does not care about the ordering of the input words as long as input sequences are always shown to it in a consistent way.
+
+
+7-2.
+Suppose that we have a vocabulary of 3 words, "a", "b", and "c", and we want to predict the next word in a sentence given the previous two words. Also suppose that we don't want to use feature vectors for words: we simply use the local encoding, i.e. a 3-component vector with one entry being 1 and all other two entries being 0.
+In the language models that we have seen so far, each of the context words has its own dedicated section of the network, so we would encode this problem with two 3-dimensional inputs. That makes for a total of 6 dimensions; clearly, the more context words we want to include, the more input units our network must have. Here's a method that uses fewer input units:
+We could instead encode the counts of each word in the context. So a context of "a a" would be encoded as input vector [2 0 0] instead of [1 0 0 1 0 0], and "b c" would be encoded as input vector [0 1 1] instead of [0 1 0 0 0 1]. Now we only need an input vector of the size of our vocabulary (3 in our case), as opposed to the size of our vocabulary times the length of the context (which makes for a total of 6 in our case). Are there any significant problems with this idea?
+
+Yes: the network loses the knowledge of the location at which a context word occurs, and that is valuable knowledge.
+
+
+
+
+

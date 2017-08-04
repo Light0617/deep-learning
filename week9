@@ -1,0 +1,60 @@
+1.
+You are experimenting with two different models for a classification task. The figures below show the classification error you get as training progresses on the training data and the validation data for each of the two models. Which model do you think would perform better on previously unseen test data?.
+
+valid 3
+
+2.
+The figure below shows the histogram of weights for a learned Neural Network.
+Which regularization technique has been used during learning?
+
+L1 regularization
+X adding weight noise
+X L2 regularization
+
+
+3.
+Suppose you want to regularize the weights of a neural network during training so that lots of its weights are quite close to zero, but a few are a very long way from zero. Which cost function you would add to your objective function?
+
+log
+
+4.
+In a linear regression task, a d dimensional input vector x is used to predict the output value y using the weight vector w where y=wTx. The error function E=12(t−wTx)2 where t is the target output value. We want to use a student-t cost for the weights: C=λ2∑di=1log(1+w2i).
+
+The total error to be optimized Etot=E+C. What is the expression for ∂Etot∂wi?
+
+
+∂Etot∂wi=−(t−wTx)xi+λwi(1+w2i)
+
+
+5.
+Different regularization methods have different effects on the learning process. For example L2 regularization penalizes high weight values. L1 regularization penalizes weight values that do not equal zero. Adding noise to the weights during learning ensures that the learned hidden representations take extreme values. Sampling the hidden representations regularizes the network by pushing the hidden representation to be binary during the forward pass which limits the modeling capacity of the network.
+Given the shown histogram of activations (just before the nonlinear logistic nonlinearity) for a Neural Network, what is the regularization method that has been used (check all that apply)?
+
+
+Adding weight noise
+(Noise in the weights will make the outputs of the units noisy unless they are firmly on or firmly off. The learning will therefore tend to stop once the units behave like this.)
+
+Sampling the hidden representation
+(When you sample the hidden states, the sampling creates noise if the logistic is in its sensitive region. The learning tends to find solutions that minimize this noise by keeping units firmly on or firmly off.)
+
+
+6.
+Suppose we have trained a neural network with one hidden layer and a single logistic output unit to predict whether or not an image contains a bird. If we retrain the network in the same way on the same data but using half as many hidden units, which of the following statements is true:
+
+It will almost certainly do worse on the training data.
+
+6-2
+If we increase the amount of training data and train the network again, which of the following statements will probably be true:
+
+It will do better on the training data.
+
+
+
+
+
+
+
+
+
+
+

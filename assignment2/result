@@ -1,0 +1,181 @@
+10 epochs with a 50 dimensional embedding space, 200  default
+Final Training CE 2.534
+Final Validation CE 2.609
+Final Test CE 2.615
+Training took 506.14 seconds
+
+2.
+
+10 epochs with a 50 dimensional embedding space, 200 , a learning rate of 0.0001
+Average Training CE 4.384
+Finished Training.
+Final Training CE 4.384
+Final Validation CE 4.385
+Final Test CE 4.392
+Training took 584.73 seconds
+
+Average Training CE 27.851
+Finished Training.
+Final Training CE 27.851
+Final Validation CE 27.795
+Final Test CE 27.829
+Training took 1170.07 seconds
+
+3.
+
+
+no training
+Average Training CE 5.516
+Finished Training.
+Final Training CE 5.516
+Final Validation CE 5.516
+Final Test CE 5.517
+Training took 544.25 seconds
+
+
+5. 
+Model A: Learning rate = 0.001,
+Average Training CE 4.565
+Finished Training.
+Final Training CE 4.565
+Final Validation CE 4.431
+Final Test CE 4.438
+Training took 65.54 seconds
+
+Model B: Learning rate = 0.1
+Average Training CE 4.405
+Finished Training.
+Final Training CE 4.405
+Final Validation CE 4.393
+Final Test CE 4.401
+Training took 72.39 seconds
+
+Model C: Learning rate = 10.0.
+Average Training CE 3.667
+Finished Training.
+Final Training CE 3.667
+Final Validation CE 3.359
+Final Test CE 3.367
+Training took 59.89 seconds
+
+6.
+10 epochs
+
+Model A: Learning rate = 0.001,
+Average Training CE 4.380
+Finished Training.
+Final Training CE 4.380
+Final Validation CE 4.382
+Final Test CE 4.388
+Training took 571.22 seconds
+
+ModelB
+Average Training CE 2.933
+Finished Training.
+Final Training CE 2.933
+Final Validation CE 2.923
+Final Test CE 2.924
+Training took 690.27 seconds
+
+ModelC
+Average Training CE 3.300
+Finished Training.
+Final Training CE 3.300
+Final Validation CE 3.306
+Final Test CE 3.315
+Training took 630.98 seconds
+
+
+7.
+Model A: 5 dimensional embedding, 100 dimensional hidden layer
+Average Training CE 2.802
+Finished Training.
+Final Training CE 2.802
+Final Validation CE 2.824
+Final Test CE 2.829
+Training took 323.43 seconds
+
+Model B: 50 dimensional embedding, 10 dimensional hidden layer
+Average Training CE 3.011
+Finished Training.
+Final Training CE 3.011
+Final Validation CE 3.022
+Final Test CE 3.021
+Training took 277.63 seconds
+
+Model C: 50 dimensional embedding, 200 dimensional hidden layer
+Average Training CE 2.537
+Finished Training.
+Final Training CE 2.537
+Final Validation CE 2.610
+Final Test CE 2.618
+Training took 606.13 seconds
+
+Model D: 100 dimensional embedding, 5 dimensional hidden layer
+Average Training CE 3.244
+Finished Training.
+Final Training CE 3.244
+Final Validation CE 3.249
+Final Test CE 3.244
+Training took 324.12 seconds
+
+
+
+
+9.
+Model A: Momentum = 0.0
+Average Training CE 3.985
+Finished Training.
+Final Training CE 3.985
+Final Validation CE 3.943
+Final Test CE 3.948
+Training took 299.17 seconds
+
+Model B: Momentum = 0.5
+Average Training CE 3.327
+Finished Training.
+Final Training CE 3.327
+Final Validation CE 3.256
+Final Test CE 3.254
+Training took 388.33 seconds
+
+Model C: Momentum = 0.9
+Average Training CE 2.714
+Finished Training.
+Final Training CE 2.714
+Final Validation CE 2.711
+Final Test CE 2.720
+Training took 406.39 seconds
+
+10.
+Average Training CE 2.536
+Finished Training.
+Final Training CE 2.536
+Final Validation CE 2.609
+Final Test CE 2.616
+Training took 786.55 seconds
+
+night 1.83
+week 1.89
+year 2.37
+days 2.39
+game 2.95
+season 2.99
+ago 3.16
+off 3.18
+case 3.19
+times 3.25
+
+
+11.
+including 0.33
+. 0.33
+dr. 0.53
+? 0.64
+$ 0.69
+) 0.70
+street 0.76
+former 0.94
+university 0.96
+office 1.04
+

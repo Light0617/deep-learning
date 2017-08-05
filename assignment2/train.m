@@ -96,11 +96,13 @@ for epoch = 1:epochs
     output_bias_gradient = sum(error_deriv, 2);
     back_propagated_deriv_1 = (hid_to_output_weights * error_deriv) ...
       .* hidden_layer_state .* (1 - hidden_layer_state);
-
     %% HIDDEN LAYER.
     % FILL IN CODE. Replace the line below by one of the options.
     embed_to_hid_weights_gradient = zeros(numhid1 * numwords, numhid2);
+	%size(embed_to_hid_weights_gradient)
     % Options:
+    embed_to_hid_weights_gradient = embedding_layer_state * back_propagated_deriv_1';
+	%size(embed_to_hid_weights_gradient)
     % (a) embed_to_hid_weights_gradient = back_propagated_deriv_1' * embedding_layer_state;
     % (b) embed_to_hid_weights_gradient = embedding_layer_state * back_propagated_deriv_1';
     % (c) embed_to_hid_weights_gradient = back_propagated_deriv_1;
@@ -109,6 +111,7 @@ for epoch = 1:epochs
     % FILL IN CODE. Replace the line below by one of the options.
     hid_bias_gradient = zeros(numhid2, 1);
     % Options
+    hid_bias_gradient = sum(back_propagated_deriv_1, 2);
     % (a) hid_bias_gradient = sum(back_propagated_deriv_1, 2);
     % (b) hid_bias_gradient = sum(back_propagated_deriv_1, 1);
     % (c) hid_bias_gradient = back_propagated_deriv_1;
@@ -116,7 +119,10 @@ for epoch = 1:epochs
 
     % FILL IN CODE. Replace the line below by one of the options.
     back_propagated_deriv_2 = zeros(numhid2, batchsize);
+	%size(back_propagated_deriv_2)
     % Options
+	back_propagated_deriv_2 = embed_to_hid_weights * back_propagated_deriv_1;
+	%size(back_propagated_deriv_2)
     % (a) back_propagated_deriv_2 = embed_to_hid_weights * back_propagated_deriv_1;
     % (b) back_propagated_deriv_2 = back_propagated_deriv_1 * embed_to_hid_weights;
     % (c) back_propagated_deriv_2 = back_propagated_deriv_1' * embed_to_hid_weights;
